@@ -1,0 +1,333 @@
+.center {
+    margin-left : auto;
+    margin-right : auto;
+	display : block;
+}
+
+#mainDiv {
+	position: relative;
+	height: 325px;
+}
+
+/*
+ * TABS
+ */
+#mainDiv > input {
+	height: 1.2em;
+	visibility: hidden;
+}
+
+#mainDiv label {
+	background: #2C3E50;
+	border-color: wheat;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: .5em .5em 0 0;
+	color: wheat;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 1em;
+	height: 1.5em;
+	line-height: 1.5em;
+	margin-right: .25em;
+	padding: 0 0.5em;
+	text-align: center;
+}
+
+#label-1 {
+	margin-left: 33px;
+}
+
+#mainDiv input:hover + label {
+	background: #756A56;
+}
+
+#mainDiv input:checked + label {
+	background-color: wheat;
+	color: #2C3E50;
+	position: relative;
+	z-index: 6;
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	-ms-transition: .1s;
+}
+
+#mainDiv > div {
+	opacity: 0;
+	z-index: -100;
+	transition: all linear 0.1s;
+	height: 305px;
+	width: 635px;
+	position: absolute;
+}
+
+#eqDiv {
+	overflow: hidden !important;
+}
+
+#mainDiv input#tab-1:checked ~ #eqDiv,
+#mainDiv input#tab-2:checked ~ #guideDiv,
+#mainDiv input#tab-3:checked ~ #tabsDiv,
+#mainDiv input#tab-4:checked ~ #proDiv {
+    opacity: 1;
+    z-index: 100;
+}
+
+#guideDiv {
+	overflow: scroll;
+}
+
+#guideDiv p {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#guideDiv h3 {
+	margin-bottom: 0px;
+	margin-top: 10px;
+	line-height: 1em;
+}
+
+#tabsDiv {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+#tabsDiv #eqTabList {
+	width: 100%;
+	page-break-after: always;
+	break-after: always;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input.visible {
+  visibility: visible !important;
+}
+
+#eqSvg, #gainSvg {
+	display: inline;
+}
+
+#eqTabList {
+    clear : both;
+}
+
+#filterButtonsDiv {
+    float : right;
+    margin-bottom : 10px;
+}
+
+#filterButtonsDiv button {
+    margin-left : 5px;
+}
+
+#presetDiv button {
+    margin-left : 5px;
+	margin-bottom: 5px;
+}
+
+#presetDiv {
+    float : right;
+    margin-bottom : 10px;
+    clear: both;
+}
+
+#eqTabList span, #infoDiv {
+    color : wheat;
+    margin-left : 5px;
+}
+
+#proDiv {
+	display: flex;
+	flex-flow: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabFavIcon {
+    max-height : 16px;
+    max-width : 16px;
+    float : right;
+    margin-left : 4px;
+}
+
+body {
+    background-color : #2C3E50;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-width : 640px;
+}
+
+html {
+    min-height : 500px;
+}
+
+h1,h2,h3,#pl,#lt {
+    color : wheat;
+}
+
+#lt {
+    line-height : 1.5;
+}
+
+#pl {
+    color : wheat;
+    outline : none;
+    display : none;
+    font-size : 14px;
+}
+
+#presetNameInput, button {
+    background-color : #2C3E50;
+    color : wheat;
+    outline : none;
+    border-width : 1px;
+    border-color : wheat;
+    border-style : solid;
+	border-radius: 2px;
+}
+
+#presetNameInput {
+    height: 20px;
+    width: 75px;
+}
+
+#importPresetsFile {
+	display: none;
+}
+
+em, a, body {
+    color : wheat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#amzDiv {
+	margin-top: 11px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+a.button {
+    background-color : #2C3E50;
+    border-width : 1px;
+	color: wheat;
+    border-color : wheat;
+    border-style : solid;
+	padding: 3px;
+
+    text-decoration: none;
+}
+
+form {
+	margin-bottom: 0px;
+}
+
+a:focus {
+    outline: 0;
+}
+
+button :focus {
+
+}
+#warning, #contactInfo {
+    margin-left : auto;
+    margin-right : 5px;
+    float : right;
+    clear: both;
+}
+
+.filterDot {
+    pointer-events : all;
+}
+.filterDot:hover {
+    stroke : white;
+    stroke-width : 2px;
+}
+
+.gainLine {
+    stroke-width: 5px;
+}
+.gainLine:hover {
+    stroke: white;
+}
+
+#infoDiv{
+    float:right;
+	margin-bottom: 5px;
+}
+#paypal {
+    display: inline;
+}
+
+#eqThisTabDiv {
+	clear: both;
+}
+
+#eqOptionsDiv {
+	position: absolute;
+	top: 21;
+	left: -16;
+}
+
+#vizButton {
+	font-size: 10px;
+	-webkit-transform: rotate(-90deg);   
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+#vizButton.on {
+    background-color : wheat;
+    color : #2C3E50;
+    outline : none;
+    border-width : 1px;
+    border-color : wheat;
+    border-style : solid;
+}
+
+#requiresProDiv {
+	position: absolute;
+	top: 102px;
+    left: 100px;
+    z-index: 1000;
+    width: 484px;
+    text-align: center;
+    pointer-events: none;
+	opacity: 0;
+	transition: all linear 0.2s;
+}
+
+#upgradeExtensionDiv {
+	position: absolute;
+	top: 102px;
+    left: 100px;
+    width: 484px;
+    text-align: center;
+    pointer-events: none;
+	transition: all linear 0.2s;
+}
+
+#requiresProDiv.show {
+	opacity: 1;
+}

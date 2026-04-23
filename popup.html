@@ -1,0 +1,153 @@
+<link rel="stylesheet" type="text/css" href="popup.css" />
+<script src="snap.svg-min.js"></script>
+<script src="popup.js"></script>
+<body>
+  <span id="warning"
+    ><em
+      >Warning: Loud audio will damage hearing/speakers! Listen responsibly
+      :)</em
+    ></span
+  >
+  <span id="contactInfo"
+    >Feel free to
+    <a
+      href="mailto:4kevinking@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      >email me</a
+    >
+    or visit the
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://chrome.google.com/webstore/detail/ears-audio-toolkit/nfdfiepdkbnoanddpianalelglmfooik"
+      >chrome web store</a
+    >.</span
+  >
+  <h1>Ears Audio Toolkit</h1>
+  <div id="lt"></div>
+  <div class="center">
+    <a
+      id="pl"
+      target="_blank"
+      href="https://chrome.google.com/webstore/detail/ears-audio-toolkit/nfdfiepdkbnoanddpianalelglmfooik"
+      rel="noopener noreferrer"
+      >Purchase Ears or Leave Feedback</a
+    >
+  </div>
+  <div id="mainDiv">
+    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+    <label id="label-1" for="tab-1">Controls</label>
+    <input id="tab-2" type="radio" name="tab-group" />
+    <label for="tab-2">Guide</label>
+    <input id="tab-3" type="radio" name="tab-group" />
+    <label for="tab-3">Active Tabs</label>
+    <div id="eqDiv">
+      <svg id="gainSvg" width="30" height="300"></svg>
+      <svg id="eqSvg" width="600" height="300"></svg>
+      <div id="eqOptionsDiv">
+        <button id="vizButton" class="on">
+          <span>Spectrum<br />Visualizer</span>
+        </button>
+      </div>
+    </div>
+    <div id="guideDiv">
+      <p>
+        When you click the Ears icon, the current tab is added to Ears. To add
+        another tab, open that tab, then click the Ears icon again.
+      </p>
+      <h3>EQ</h3>
+      <p>
+        The movable dots each represent a filter used to equalize (or EQ) the
+        audio. Filters allow you to boost or lower certain frequencies (i.e.
+        just part of the treble or bass). The purple dots act as shelf filters
+        while the blue dots act as notch filters.
+      </p>
+      <p>
+        Moving a dot left or right selects lower or higher frequencies, while
+        moving a dot up or down increases or decreases the volume of those
+        frequencies. Shift-dragging a filter up and down will widen or narrow
+        the filter, also called changing its Q value.
+      </p>
+
+      <p>
+        The frequency spectrum visualizer shows you what you are listening to
+        and how your EQ has changed it. Lower sounds appear to the left and
+        higher to the right (with volume indicated by the height of a peak).
+        <a
+          href="https://www.youtube.com/watch?v=VMnkYTan5pY"
+          rel="noreferrer
+			noopener"
+          target="_blank"
+          >Watch the demo</a
+        >.
+      </p>
+
+      <p>
+        For more information about how to use filters, check out
+        <a
+          href="https://music.tutsplus.com/tutorials/how-to-use-a-parametric-equalizer--audio-2301"
+          rel="noopener noreferrer"
+          target="_blank"
+          >this guide</a
+        >.
+      </p>
+      <h3>Presets</h3>
+      <p>
+        To save a configuration of filters for later, type a name in the text
+        box below, then click 'Save Preset' or press ENTER. The save and delete
+        buttons operate on whichever preset's name is selected in the text box.
+      </p>
+    </div>
+    <div id="tabsDiv">
+      <div id="eqTabList"></div>
+    </div>
+  </div>
+  <div id="filterButtonsDiv">
+    <input id="presetNameInput" type="text" placeholder="Preset Name" />
+    <button id="savePresetButton">+ Save Preset</button>
+    <button id="deletePresetButton">- Delete Preset</button>
+    <button id="resetFiltersButton">Reset Filters</button>
+    <button
+      id="exportPresetsButton"
+      title="Export all saved presets to a file."
+    >
+      Export Presets
+    </button>
+    <button
+      id="importPresetsButton"
+      title="Import presets that were exported from Ears."
+    >
+      Import Presets
+    </button>
+    <input type="file" id="importPresetsFile" />
+  </div>
+  <div id="presetDiv">
+    <button id="bassBoostButton">Bass Boost</button>
+    <span id="userPresetSpan"></span>
+  </div>
+  <div id="eqThisTabDiv">
+    <button id="eqTabButton" class="center">EQ Current Tab</button>
+  </div>
+  <div id="requiresProDiv">
+    Saving more than 3 presets requires Ears Pro. Click the Pro tab above to
+    start your 7-day free trial!
+  </div>
+  <!-- <div id='upgradeExtensionDiv'>
+	  If you see this, right-click the Ears icon, click 'Manage Extensions', and then click 'Update' to update Ears.
+  </div> -->
+  <a
+    id="fullscreen-link"
+    target="_blank"
+    href="chrome-extension://nfdfiepdkbnoanddpianalelglmfooik/popup.html"
+    style="position: fixed; bottom: 8; right: 8"
+    >Open in Full Window</a
+  >
+  <a
+    id="proPromo"
+    href="https://www.buymeacoffee.com/earsaudio"
+    style="position: fixed; bottom: 8; left: 8; color: #add8e6"
+    target="_blank"
+    >Enjoying Ears? Buy me a coffee &#9749;&#x1F64F;</a
+  >
+</body>
